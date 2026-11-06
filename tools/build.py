@@ -1,5 +1,7 @@
 """Собирает index.html из tools/menu.json. Запуск: python tools/build.py"""
 import json
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from html import escape
 from pathlib import Path
 
@@ -13,9 +15,34 @@ HERO_MAIN = "1504674900247-0877df9cc836"
 HERO_ROUND = "1648726445011-9fbf3a5ddb90"
 HERO_SMALL = "1571877227200-a0d98ea607e9"
 
+SITE_URL = "https://rotaxxx123soft-stack.github.io/MyFamilyMenu/"
+IMAGES = ROOT / "images"
+needed_images = set()
 
-def photo_url(photo, width, quality=72):
-    return f"https://images.unsplash.com/photo-{photo}?auto=format&fit=crop&w={width}&q={quality}"
+
+def photo_url(photo, width):
+    """Фото хранятся в репозитории: сторонний сервер картинок доступен не во всех сетях."""
+    needed_images.add((photo, width))
+    return f"{BASE}images/{photo}-{width}.jpg"
+
+
+def download_missing_images():
+    """Скачивает с Unsplash фото нужных размеров, которых ещё нет в папке images."""
+    IMAGES.mkdir(exist_ok=True)
+    missing = [(p, w) for p, w in sorted(needed_images) if not (IMAGES / f"{p}-{w}.jpg").exists()]
+
+    def fetch(item):
+        photo, width = item
+        url = f"https://images.unsplash.com/photo-{photo}?fm=jpg&fit=crop&w={width}&q=72"
+        req = urllib.request.Request(url, headers={"User-Agent": "MyFamilyMenu build script"})
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            if not resp.headers.get("Content-Type", "").startswith("image/jpeg"):
+                raise RuntimeError(f"{url}: не JPEG")
+            (IMAGES / f"{photo}-{width}.jpg").write_bytes(resp.read())
+
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        list(pool.map(fetch, missing))
+    return len(missing)
 
 
 def srcset(photo, widths):
@@ -144,15 +171,13 @@ page = f"""<!doctype html>
   <meta property="og:site_name" content="My family">
   <meta property="og:title" content="Меню кафе My family">
   <meta property="og:description" content="{description}">
-  <meta property="og:image" content="{photo_url(HERO_MAIN, 1200)}">
+  <meta property="og:image" content="{SITE_URL}images/{HERO_MAIN}-1200.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="{BASE}favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="{BASE}css/style.css">
-  <script>document.documentElement.classList.add('js')</script>
   <script src="{BASE}js/main.js" defer></script>
   <script type="application/ld+json">
   {{"@context":"{SCHEMA}","@type":"CafeOrCoffeeShop","name":"My family","description":"{description}","hasMenu":"#menu"}}
@@ -186,15 +211,15 @@ page = f"""<!doctype html>
       </div>
       <div class="hero__media">
         <figure class="hero__img hero__img--main">
-          <img src="{photo_url(HERO_MAIN, 1000, 78)}" srcset="{srcset(HERO_MAIN, (640, 1000, 1400))}"
+          <img src="{photo_url(HERO_MAIN, 1000)}" srcset="{srcset(HERO_MAIN, (640, 1000, 1400))}"
                sizes="(min-width: 900px) 40vw, 100vw" width="1000" height="1250"
                alt="Мясо, зелень и специи на тёмном столе" fetchpriority="high" decoding="async">
         </figure>
         <figure class="hero__img hero__img--round">
-          <img src="{photo_url(HERO_ROUND, 480, 75)}" width="480" height="480" alt="Тарелка борща со сметаной и зеленью" decoding="async">
+          <img src="{photo_url(HERO_ROUND, 480)}" width="480" height="480" alt="Тарелка борща со сметаной и зеленью" decoding="async">
         </figure>
         <figure class="hero__img hero__img--small">
-          <img src="{photo_url(HERO_SMALL, 560, 75)}" width="560" height="420" alt="Порция тирамису" decoding="async">
+          <img src="{photo_url(HERO_SMALL, 560)}" width="560" height="420" alt="Порция тирамису" decoding="async">
         </figure>
       </div>
     </div>
@@ -223,5 +248,8 @@ page = f"""<!doctype html>
 </html>
 """
 
+needed_images.add((HERO_MAIN, 1200))  # превью ссылки в мессенджерах
+downloaded = download_missing_images()
+
 (ROOT / "index.html").write_text(page, encoding="utf-8")
-print(f"index.html: {total} позиций, {len(page) // 1024} КБ")
+print(f"index.html: {total} позиций, {len(page) // 1024} КБ; скачано фото: {downloaded}")

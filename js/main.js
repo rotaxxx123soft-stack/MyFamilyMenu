@@ -1,4 +1,7 @@
 (() => {
+  /* Класс ставит сам скрипт: если он не запустится, фото и карточки останутся видимыми */
+  document.documentElement.classList.add('js');
+
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Плавное проявление фотографий и запасной вид, если фото не загрузилось */
@@ -47,10 +50,14 @@
 
   const setActive = (link) => {
     if (link === activeLink) return;
-    activeLink?.classList.remove('is-active');
-    activeLink?.removeAttribute('aria-current');
-    link?.classList.add('is-active');
-    link?.setAttribute('aria-current', 'true');
+    if (activeLink) {
+      activeLink.classList.remove('is-active');
+      activeLink.removeAttribute('aria-current');
+    }
+    if (link) {
+      link.classList.add('is-active');
+      link.setAttribute('aria-current', 'true');
+    }
     activeLink = link;
 
     /* На телефоне прокручиваем саму полосу разделов, не страницу */
