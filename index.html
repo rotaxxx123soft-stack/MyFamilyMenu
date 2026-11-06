@@ -1,1321 +1,697 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Меню кафе My family</title>
-  <meta name="description" content="Меню кафе My family: супы, горячие блюда, бургеры, салаты, десерты и напитки. Описание, вес и цена каждой позиции.">
-  <meta name="theme-color" content="#F6EFE4">
-  <link rel="canonical" href="https://example.com/">
-
+  <title>Меню кафе My family — супы, горячее, фастфуд, десерты и напитки</title>
+  <meta name="description" content="Онлайн-меню кафе My family: супы, основные блюда, фастфуд, салаты, десерты и напитки. Состав, вес порции и цена каждого блюда.">
+  <meta name="theme-color" content="#F6EFE3">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="My family">
   <meta property="og:title" content="Меню кафе My family">
-  <meta property="og:description" content="Супы, горячие блюда, бургеры, салаты, десерты и напитки с ценами.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80">
-
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+  <meta property="og:description" content="Онлайн-меню кафе My family: супы, основные блюда, фастфуд, салаты, десерты и напитки. Состав, вес порции и цена каждого блюда.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=72">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/MyFamilyMenu/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500;1,600&amp;family=Onest:wght@400;500;600&amp;display=swap">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="/MyFamilyMenu/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="/MyFamilyMenu/js/main.js" defer></script>
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CafeOrCoffeeShop",
-  "name": "My family",
-  "servesCuisine": [
-    "Русская",
-    "Европейская"
-  ],
-  "openingHours": "Mo-Su 09:00-23:00",
-  "priceRange": "₽₽",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ул. Садовая, 12",
-    "addressLocality": "Москва",
-    "addressCountry": "RU"
-  },
-  "hasMenu": {
-    "@type": "Menu",
-    "name": "Меню кафе My family",
-    "inLanguage": "ru",
-    "hasMenuSection": [
-      {
-        "@type": "MenuSection",
-        "name": "Супы",
-        "hasMenuItem": [
-          {
-            "@type": "MenuItem",
-            "name": "Борщ с говядиной",
-            "offers": {
-              "@type": "Offer",
-              "price": "420",
-              "priceCurrency": "RUB"
-            },
-            "description": "Свёкла, капуста и томлёная говядина. Со сметаной и бородинским хлебом."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Куриный суп с лапшой",
-            "offers": {
-              "@type": "Offer",
-              "price": "340",
-              "priceCurrency": "RUB"
-            },
-            "description": "Прозрачный бульон, яичная лапша ручной нарезки, морковь и укроп."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Солянка мясная",
-            "offers": {
-              "@type": "Offer",
-              "price": "450",
-              "priceCurrency": "RUB"
-            },
-            "description": "Три вида мяса, маслины, каперсы и лимон в насыщенном бульоне."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Крем-суп из тыквы",
-            "offers": {
-              "@type": "Offer",
-              "price": "360",
-              "priceCurrency": "RUB"
-            },
-            "description": "Запечённая тыква, сливки, тыквенные семечки и капля оливкового масла."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Грибной крем-суп",
-            "offers": {
-              "@type": "Offer",
-              "price": "390",
-              "priceCurrency": "RUB"
-            },
-            "description": "Шампиньоны и белые грибы, сливки, гренки из чиабатты."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Суп с фрикадельками",
-            "offers": {
-              "@type": "Offer",
-              "price": "330",
-              "priceCurrency": "RUB"
-            },
-            "description": "Фрикадельки из индейки, картофель, морковь и свежая зелень."
-          }
-        ]
-      },
-      {
-        "@type": "MenuSection",
-        "name": "Основные блюда",
-        "hasMenuItem": [
-          {
-            "@type": "MenuItem",
-            "name": "Котлеты с картофельным пюре",
-            "offers": {
-              "@type": "Offer",
-              "price": "490",
-              "priceCurrency": "RUB"
-            },
-            "description": "Две котлеты из говядины и свинины, сливочное пюре и мясная подлива."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Паста карбонара",
-            "offers": {
-              "@type": "Offer",
-              "price": "560",
-              "priceCurrency": "RUB"
-            },
-            "description": "Спагетти, гуанчале, яичный желток и пармезан. Классический рецепт без сливок."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Паста с томатами и базиликом",
-            "offers": {
-              "@type": "Offer",
-              "price": "470",
-              "priceCurrency": "RUB"
-            },
-            "description": "Спагетти в соусе из томатов и чеснока, моцарелла и свежий базилик."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Шашлык из свинины",
-            "offers": {
-              "@type": "Offer",
-              "price": "690",
-              "priceCurrency": "RUB"
-            },
-            "description": "Свиная шейка на углях, маринованный лук и соус ткемали."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Стейк из говядины",
-            "offers": {
-              "@type": "Offer",
-              "price": "1290",
-              "priceCurrency": "RUB"
-            },
-            "description": "Мраморная говядина средней прожарки, овощи гриль и перечный соус."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Лосось на гриле",
-            "offers": {
-              "@type": "Offer",
-              "price": "890",
-              "priceCurrency": "RUB"
-            },
-            "description": "Филе лосося, спаржа, молодой картофель и лимонное масло."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Картофельное пюре",
-            "offers": {
-              "@type": "Offer",
-              "price": "170",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Картофель по-деревенски",
-            "offers": {
-              "@type": "Offer",
-              "price": "190",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Гречка с луком и маслом",
-            "offers": {
-              "@type": "Offer",
-              "price": "150",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Рис с овощами",
-            "offers": {
-              "@type": "Offer",
-              "price": "160",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Овощи гриль",
-            "offers": {
-              "@type": "Offer",
-              "price": "260",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Спагетти со сливочным маслом",
-            "offers": {
-              "@type": "Offer",
-              "price": "150",
-              "priceCurrency": "RUB"
-            }
-          }
-        ]
-      },
-      {
-        "@type": "MenuSection",
-        "name": "Фастфуд",
-        "hasMenuItem": [
-          {
-            "@type": "MenuItem",
-            "name": "Классический бургер",
-            "offers": {
-              "@type": "Offer",
-              "price": "520",
-              "priceCurrency": "RUB"
-            },
-            "description": "Говяжья котлета, чеддер, маринованный огурец, томат и фирменный соус."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Бургер с беконом",
-            "offers": {
-              "@type": "Offer",
-              "price": "610",
-              "priceCurrency": "RUB"
-            },
-            "description": "Двойной чеддер, хрустящий бекон и карамелизированный лук."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Картофель фри",
-            "offers": {
-              "@type": "Offer",
-              "price": "220",
-              "priceCurrency": "RUB"
-            },
-            "description": "Хрустящий картофель с морской солью и соусом на выбор."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Куриные наггетсы",
-            "offers": {
-              "@type": "Offer",
-              "price": "360",
-              "priceCurrency": "RUB"
-            },
-            "description": "Филе в панировке панко, 8 штук, с соусом барбекю."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Хот-дог",
-            "offers": {
-              "@type": "Offer",
-              "price": "340",
-              "priceCurrency": "RUB"
-            },
-            "description": "Говяжья сосиска в бриоши, горчица, хрустящий лук и огурчики."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Шаурма с курицей",
-            "offers": {
-              "@type": "Offer",
-              "price": "390",
-              "priceCurrency": "RUB"
-            },
-            "description": "Курица гриль, свежие овощи и чесночный соус в тонком лаваше."
-          }
-        ]
-      },
-      {
-        "@type": "MenuSection",
-        "name": "Салаты",
-        "hasMenuItem": [
-          {
-            "@type": "MenuItem",
-            "name": "Цезарь с курицей",
-            "offers": {
-              "@type": "Offer",
-              "price": "490",
-              "priceCurrency": "RUB"
-            },
-            "description": "Романо, курица гриль, пармезан, гренки и соус на анчоусах."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Греческий",
-            "offers": {
-              "@type": "Offer",
-              "price": "420",
-              "priceCurrency": "RUB"
-            },
-            "description": "Томаты, огурец, сладкий перец, маслины и фета с орегано."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Боул с киноа",
-            "offers": {
-              "@type": "Offer",
-              "price": "520",
-              "priceCurrency": "RUB"
-            },
-            "description": "Киноа, нут, авокадо, печёные овощи и соус тахини."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Салат с авокадо",
-            "offers": {
-              "@type": "Offer",
-              "price": "460",
-              "priceCurrency": "RUB"
-            },
-            "description": "Микс салатов, авокадо, томаты черри, огурец, семена и лимонная заправка."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Оливье с говяжьим языком",
-            "offers": {
-              "@type": "Offer",
-              "price": "390",
-              "priceCurrency": "RUB"
-            },
-            "description": "Язык, картофель, малосольные огурцы, горошек и перепелиное яйцо."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Тёплый салат с ростбифом",
-            "offers": {
-              "@type": "Offer",
-              "price": "590",
-              "priceCurrency": "RUB"
-            },
-            "description": "Ростбиф, руккола, вяленые томаты, пармезан и бальзамик."
-          }
-        ]
-      },
-      {
-        "@type": "MenuSection",
-        "name": "Десерты",
-        "hasMenuItem": [
-          {
-            "@type": "MenuItem",
-            "name": "Чизкейк Нью-Йорк",
-            "offers": {
-              "@type": "Offer",
-              "price": "380",
-              "priceCurrency": "RUB"
-            },
-            "description": "Сливочный сыр, песочная основа и ягодный соус."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Тирамису",
-            "offers": {
-              "@type": "Offer",
-              "price": "420",
-              "priceCurrency": "RUB"
-            },
-            "description": "Савоярди, маскарпоне, эспрессо и какао."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Блинчики со сметаной",
-            "offers": {
-              "@type": "Offer",
-              "price": "290",
-              "priceCurrency": "RUB"
-            },
-            "description": "Три тонких блина, сметана и малиновое варенье."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Панкейки с ягодами",
-            "offers": {
-              "@type": "Offer",
-              "price": "390",
-              "priceCurrency": "RUB"
-            },
-            "description": "Пышные панкейки, свежие ягоды и кленовый сироп."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Шоколадный торт",
-            "offers": {
-              "@type": "Offer",
-              "price": "410",
-              "priceCurrency": "RUB"
-            },
-            "description": "Тёмный шоколад 70%, шоколадный ганаш и хрустящая основа."
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Медовик",
-            "offers": {
-              "@type": "Offer",
-              "price": "340",
-              "priceCurrency": "RUB"
-            },
-            "description": "Тонкие медовые коржи и нежный сметанный крем."
-          }
-        ]
-      },
-      {
-        "@type": "MenuSection",
-        "name": "Напитки",
-        "hasMenuItem": [
-          {
-            "@type": "MenuItem",
-            "name": "Эспрессо",
-            "offers": {
-              "@type": "Offer",
-              "price": "160",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Американо",
-            "offers": {
-              "@type": "Offer",
-              "price": "190",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Капучино",
-            "offers": {
-              "@type": "Offer",
-              "price": "240",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Латте",
-            "offers": {
-              "@type": "Offer",
-              "price": "260",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Флэт уайт",
-            "offers": {
-              "@type": "Offer",
-              "price": "260",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Раф ванильный",
-            "offers": {
-              "@type": "Offer",
-              "price": "290",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Чёрный · Эрл Грей",
-            "offers": {
-              "@type": "Offer",
-              "price": "290",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Зелёный · Сенча",
-            "offers": {
-              "@type": "Offer",
-              "price": "290",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Облепиховый с мёдом",
-            "offers": {
-              "@type": "Offer",
-              "price": "380",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Имбирный с лимоном",
-            "offers": {
-              "@type": "Offer",
-              "price": "360",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Травяной сбор",
-            "offers": {
-              "@type": "Offer",
-              "price": "320",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Классический",
-            "offers": {
-              "@type": "Offer",
-              "price": "290",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Клубника и базилик",
-            "offers": {
-              "@type": "Offer",
-              "price": "320",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Манго и маракуйя",
-            "offers": {
-              "@type": "Offer",
-              "price": "340",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Тархун",
-            "offers": {
-              "@type": "Offer",
-              "price": "310",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Апельсиновый фреш",
-            "offers": {
-              "@type": "Offer",
-              "price": "350",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Грейпфрутовый фреш",
-            "offers": {
-              "@type": "Offer",
-              "price": "370",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Яблочный",
-            "offers": {
-              "@type": "Offer",
-              "price": "190",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Томатный",
-            "offers": {
-              "@type": "Offer",
-              "price": "190",
-              "priceCurrency": "RUB"
-            }
-          },
-          {
-            "@type": "MenuItem",
-            "name": "Клюквенный морс",
-            "offers": {
-              "@type": "Offer",
-              "price": "220",
-              "priceCurrency": "RUB"
-            }
-          }
-        ]
-      }
-    ]
-  }
-}
+  {"@context":"https://schema.org/","@type":"CafeOrCoffeeShop","name":"My family","description":"Онлайн-меню кафе My family: супы, основные блюда, фастфуд, салаты, десерты и напитки. Состав, вес порции и цена каждого блюда.","hasMenu":"#menu"}
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#menu">К меню</a>
+  <a class="skip" href="#menu">К меню</a>
 
-  <header class="topbar" id="topbar">
-    <div class="wrap topbar__inner">
-      <a class="logo" href="#top" aria-label="My family — в начало страницы">
-        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9"/><path d="M10 25V14.5a6 6 0 0 1 12 0V25Z"/></svg>
-        <span class="logo__word">My <em>family</em></span>
-      </a>
-      <nav class="nav" aria-label="Разделы меню">
-        <div class="nav__track">
-          <a class="chip" href="#soups">Супы</a>
-          <a class="chip" href="#mains">Основные блюда</a>
-          <a class="chip" href="#fastfood">Фастфуд</a>
-          <a class="chip" href="#salads">Салаты</a>
-          <a class="chip" href="#desserts">Десерты</a>
-          <a class="chip" href="#drinks">Напитки</a>
-        </div>
+  <header class="site-header" id="top">
+    <div class="wrap site-header__inner">
+      <a class="logo" href="#top" aria-label="My family — в начало страницы">My family</a>
+      <nav class="cats" aria-label="Разделы меню">
+        <ul class="cats__list">
+          <li><a href="#soups">Супы</a></li>
+          <li><a href="#mains">Основные</a></li>
+          <li><a href="#fastfood">Фастфуд</a></li>
+          <li><a href="#salads">Салаты</a></li>
+          <li><a href="#desserts">Десерты</a></li>
+          <li><a href="#drinks">Напитки</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap hero__inner">
-        <div class="hero__text">
-          <p class="hero__eyebrow">Кафе My family</p>
-          <h1 class="hero__title" id="hero-title">Меню</h1>
-          <p class="hero__lead">Супы, горячие блюда, бургеры, салаты, десерты и&nbsp;напитки. У&nbsp;каждой позиции указаны состав, вес и&nbsp;цена.</p>
-          <dl class="facts">
-            <div class="fact"><dt>Часы работы</dt><dd>Ежедневно, 9:00–23:00</dd></div>
-            <div class="fact"><dt>В меню</dt><dd>56 позиций</dd></div>
-            <div class="fact"><dt>Цены</dt><dd>В рублях, вес — выход блюда</dd></div>
-          </dl>
-          <a class="hero__more" href="#menu">Перейти к разделам
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
-          </a>
-        </div>
-        <div class="hero__media" aria-hidden="true">
-          <div class="frame frame--arch" style="--tone: #8A4A2B">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=900&amp;q=75" srcset="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w, https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&amp;fit=crop&amp;w=1200&amp;q=75 1200w" sizes="(max-width: 900px) 90vw, 520px" width="900" height="1100" alt="" fetchpriority="high" decoding="async">
-          </div>
-          <div class="frame frame--round frame--a" style="--tone: #8A5A3A">
-            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=300&amp;q=75" srcset="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=300&amp;q=75 300w, https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=500&amp;q=75 500w" sizes="200px" width="300" height="300" alt="" fetchpriority="high" decoding="async">
-          </div>
-          <div class="frame frame--round frame--b" style="--tone: #C68A47">
-            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&amp;fit=crop&amp;w=300&amp;q=75" srcset="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&amp;fit=crop&amp;w=300&amp;q=75 300w, https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&amp;fit=crop&amp;w=500&amp;q=75 500w" sizes="160px" width="300" height="300" alt="" fetchpriority="high" decoding="async">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div id="menu" class="menu">
-    <section class="section" id="soups" aria-labelledby="soups-title">
-      <div class="wrap">
-      <header class="section__head reveal">
-        <div class="section__title">
-          <span class="section__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5h18a9 9 0 0 1-18 0Z"/><path d="M8.5 21h7"/><path d="M9 3.5c-.9 1.2.9 2.1 0 3.4M12.5 3c-.9 1.2.9 2.1 0 3.4M16 3.5c-.9 1.2.9 2.1 0 3.4"/></svg></span>
-          <h2 id="soups-title">Супы</h2>
-        </div>
-        <div class="section__aside">
-          <span class="section__count">6 позиций</span>
-          <p class="section__note">Все супы подаём с хлебом. Сметану и зелень можно попросить отдельно.</p>
-        </div>
-      </header>
-      <ul class="dishes" role="list">
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #8E2F3C">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5h18a9 9 0 0 1-18 0Z"/><path d="M8.5 21h7"/><path d="M9 3.5c-.9 1.2.9 2.1 0 3.4M12.5 3c-.9 1.2.9 2.1 0 3.4M16 3.5c-.9 1.2.9 2.1 0 3.4"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Борщ с говядиной</h3>
-              <p class="dish__desc">Свёкла, капуста и томлёная говядина. Со сметаной и бородинским хлебом.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">350 г</span>
-                <data class="dish__price" value="420">420 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #C99A3B">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5h18a9 9 0 0 1-18 0Z"/><path d="M8.5 21h7"/><path d="M9 3.5c-.9 1.2.9 2.1 0 3.4M12.5 3c-.9 1.2.9 2.1 0 3.4M16 3.5c-.9 1.2.9 2.1 0 3.4"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Куриный суп с лапшой</h3>
-              <p class="dish__desc">Прозрачный бульон, яичная лапша ручной нарезки, морковь и укроп.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">300 г</span>
-                <data class="dish__price" value="340">340 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #B04E2C">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5h18a9 9 0 0 1-18 0Z"/><path d="M8.5 21h7"/><path d="M9 3.5c-.9 1.2.9 2.1 0 3.4M12.5 3c-.9 1.2.9 2.1 0 3.4M16 3.5c-.9 1.2.9 2.1 0 3.4"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Солянка мясная</h3>
-              <p class="dish__desc">Три вида мяса, маслины, каперсы и лимон в насыщенном бульоне.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">350 г</span>
-                <data class="dish__price" value="450">450 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #D9822B">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5h18a9 9 0 0 1-18 0Z"/><path d="M8.5 21h7"/><path d="M9 3.5c-.9 1.2.9 2.1 0 3.4M12.5 3c-.9 1.2.9 2.1 0 3.4M16 3.5c-.9 1.2.9 2.1 0 3.4"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Крем-суп из тыквы</h3>
-              <p class="dish__desc">Запечённая тыква, сливки, тыквенные семечки и капля оливкового масла.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">300 г</span>
-                <data class="dish__price" value="360">360 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #9A7B5B">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5h18a9 9 0 0 1-18 0Z"/><path d="M8.5 21h7"/><path d="M9 3.5c-.9 1.2.9 2.1 0 3.4M12.5 3c-.9 1.2.9 2.1 0 3.4M16 3.5c-.9 1.2.9 2.1 0 3.4"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Грибной крем-суп</h3>
-              <p class="dish__desc">Шампиньоны и белые грибы, сливки, гренки из чиабатты.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">300 г</span>
-                <data class="dish__price" value="390">390 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #B8935A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5h18a9 9 0 0 1-18 0Z"/><path d="M8.5 21h7"/><path d="M9 3.5c-.9 1.2.9 2.1 0 3.4M12.5 3c-.9 1.2.9 2.1 0 3.4M16 3.5c-.9 1.2.9 2.1 0 3.4"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Суп с фрикадельками</h3>
-              <p class="dish__desc">Фрикадельки из индейки, картофель, морковь и свежая зелень.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">300 г</span>
-                <data class="dish__price" value="330">330 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-      </ul>
-      </div>
-    </section>
-    <section class="section" id="mains" aria-labelledby="mains-title">
-      <div class="wrap">
-      <header class="section__head reveal">
-        <div class="section__title">
-          <span class="section__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></svg></span>
-          <h2 id="mains-title">Основные блюда</h2>
-        </div>
-        <div class="section__aside">
-          <span class="section__count">12 позиций</span>
-          <p class="section__note">Гарнир к мясу и рыбе можно заменить на любой из списка ниже.</p>
-        </div>
-      </header>
-      <ul class="dishes" role="list">
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #A86F3E">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Котлеты с картофельным пюре</h3>
-              <p class="dish__desc">Две котлеты из говядины и свинины, сливочное пюре и мясная подлива.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">320 г</span>
-                <data class="dish__price" value="490">490 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #C9A15A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></svg><img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Паста карбонара" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Паста карбонара</h3>
-              <p class="dish__desc">Спагетти, гуанчале, яичный желток и пармезан. Классический рецепт без сливок.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">280 г</span>
-                <data class="dish__price" value="560">560 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #B5452F">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></svg><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Паста с томатами и базиликом" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Паста с томатами и базиликом</h3>
-              <p class="dish__desc">Спагетти в соусе из томатов и чеснока, моцарелла и свежий базилик.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">280 г</span>
-                <data class="dish__price" value="470">470 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #8A4A2B">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></svg><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Шашлык из свинины" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Шашлык из свинины</h3>
-              <p class="dish__desc">Свиная шейка на углях, маринованный лук и соус ткемали.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">250 г</span>
-                <data class="dish__price" value="690">690 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #6E3A2A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></svg><img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Стейк из говядины" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Стейк из говядины</h3>
-              <p class="dish__desc">Мраморная говядина средней прожарки, овощи гриль и перечный соус.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">300 г</span>
-                <data class="dish__price" value="1290">1 290 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #D9845A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/></svg><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Лосось на гриле" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Лосось на гриле</h3>
-              <p class="dish__desc">Филе лосося, спаржа, молодой картофель и лимонное масло.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">220 г</span>
-                <data class="dish__price" value="890">890 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-      </ul>
-      <div class="sides reveal">
-        <h3 class="sides__title">Гарниры</h3>
-        <ul class="sides__list" role="list">
-          <li class="row"><span class="row__name">Картофельное пюре</span><span class="row__vol">150 г</span><data class="row__price" value="170">170 ₽</data></li>
-          <li class="row"><span class="row__name">Картофель по-деревенски</span><span class="row__vol">150 г</span><data class="row__price" value="190">190 ₽</data></li>
-          <li class="row"><span class="row__name">Гречка с луком и маслом</span><span class="row__vol">150 г</span><data class="row__price" value="150">150 ₽</data></li>
-          <li class="row"><span class="row__name">Рис с овощами</span><span class="row__vol">150 г</span><data class="row__price" value="160">160 ₽</data></li>
-          <li class="row"><span class="row__name">Овощи гриль</span><span class="row__vol">150 г</span><data class="row__price" value="260">260 ₽</data></li>
-          <li class="row"><span class="row__name">Спагетти со сливочным маслом</span><span class="row__vol">150 г</span><data class="row__price" value="150">150 ₽</data></li>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <p class="hero__eyebrow">Кафе My family</p>
+        <h1 class="hero__title" id="hero-title">Меню</h1>
+        <p class="hero__lead">Супы, горячие блюда, фастфуд, салаты, десерты и&nbsp;напитки. Для каждого блюда указаны состав, вес порции и&nbsp;цена.</p>
+        <ul class="hero__facts">
+          <li>6 разделов</li>
+          <li>47 позиций</li>
+          <li>Цены в рублях</li>
         </ul>
       </div>
+      <div class="hero__media">
+        <figure class="hero__img hero__img--main">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=78" srcset="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=640&q=72 640w, https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1000&q=72 1000w, https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=72 1400w"
+               sizes="(min-width: 900px) 40vw, 100vw" width="1000" height="1250"
+               alt="Мясо, зелень и специи на тёмном столе" fetchpriority="high" decoding="async">
+        </figure>
+        <figure class="hero__img hero__img--round">
+          <img src="https://images.unsplash.com/photo-1648726445011-9fbf3a5ddb90?auto=format&fit=crop&w=480&q=75" width="480" height="480" alt="Тарелка борща со сметаной и зеленью" decoding="async">
+        </figure>
+        <figure class="hero__img hero__img--small">
+          <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=560&q=75" width="560" height="420" alt="Порция тирамису" decoding="async">
+        </figure>
       </div>
-    </section>
-    <section class="section" id="fastfood" aria-labelledby="fastfood-title">
-      <div class="wrap">
-      <header class="section__head reveal">
-        <div class="section__title">
-          <span class="section__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5a8 6.5 0 0 1 16 0Z"/><path d="M3 13.5c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M4.5 16.5h15"/><path d="M5 19h14v.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5Z"/></svg></span>
-          <h2 id="fastfood-title">Фастфуд</h2>
-        </div>
-        <div class="section__aside">
-          <span class="section__count">6 позиций</span>
-          <p class="section__note">Дополнительный соус — 50 ₽: кетчуп, сырный, чесночный, барбекю.</p>
-        </div>
-      </header>
-      <ul class="dishes" role="list">
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #A0562E">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5a8 6.5 0 0 1 16 0Z"/><path d="M3 13.5c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M4.5 16.5h15"/><path d="M5 19h14v.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5Z"/></svg><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Классический бургер" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Классический бургер</h3>
-              <p class="dish__desc">Говяжья котлета, чеддер, маринованный огурец, томат и фирменный соус.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">320 г</span>
-                <data class="dish__price" value="520">520 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #8C4A2A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5a8 6.5 0 0 1 16 0Z"/><path d="M3 13.5c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M4.5 16.5h15"/><path d="M5 19h14v.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5Z"/></svg><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Бургер с беконом" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Бургер с беконом</h3>
-              <p class="dish__desc">Двойной чеддер, хрустящий бекон и карамелизированный лук.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">350 г</span>
-                <data class="dish__price" value="610">610 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #D9A441">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5a8 6.5 0 0 1 16 0Z"/><path d="M3 13.5c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M4.5 16.5h15"/><path d="M5 19h14v.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5Z"/></svg><img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Картофель фри" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Картофель фри</h3>
-              <p class="dish__desc">Хрустящий картофель с морской солью и соусом на выбор.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">150 г</span>
-                <data class="dish__price" value="220">220 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #C98A3E">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5a8 6.5 0 0 1 16 0Z"/><path d="M3 13.5c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M4.5 16.5h15"/><path d="M5 19h14v.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5Z"/></svg><img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Куриные наггетсы" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Куриные наггетсы</h3>
-              <p class="dish__desc">Филе в панировке панко, 8 штук, с соусом барбекю.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">200 г</span>
-                <data class="dish__price" value="360">360 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #C0603A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5a8 6.5 0 0 1 16 0Z"/><path d="M3 13.5c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M4.5 16.5h15"/><path d="M5 19h14v.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5Z"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Хот-дог</h3>
-              <p class="dish__desc">Говяжья сосиска в бриоши, горчица, хрустящий лук и огурчики.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">230 г</span>
-                <data class="dish__price" value="340">340 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #C59A55">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5a8 6.5 0 0 1 16 0Z"/><path d="M3 13.5c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M4.5 16.5h15"/><path d="M5 19h14v.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 5 19.5Z"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Шаурма с курицей</h3>
-              <p class="dish__desc">Курица гриль, свежие овощи и чесночный соус в тонком лаваше.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">380 г</span>
-                <data class="dish__price" value="390">390 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-      </ul>
-      </div>
-    </section>
-    <section class="section" id="salads" aria-labelledby="salads-title">
-      <div class="wrap">
-      <header class="section__head reveal">
-        <div class="section__title">
-          <span class="section__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8.3 5.2-14 14-14 0 8.8-5.7 14-14 14Z"/><path d="M5 19 13 11"/></svg></span>
-          <h2 id="salads-title">Салаты</h2>
-        </div>
-        <div class="section__aside">
-          <span class="section__count">6 позиций</span>
-          <p class="section__note">Заправку можем подать отдельно — просто скажите официанту.</p>
-        </div>
-      </header>
-      <ul class="dishes" role="list">
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #8C9A5B">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8.3 5.2-14 14-14 0 8.8-5.7 14-14 14Z"/><path d="M5 19 13 11"/></svg><img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Цезарь с курицей" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Цезарь с курицей</h3>
-              <p class="dish__desc">Романо, курица гриль, пармезан, гренки и соус на анчоусах.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">230 г</span>
-                <data class="dish__price" value="490">490 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #7F9A4E">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8.3 5.2-14 14-14 0 8.8-5.7 14-14 14Z"/><path d="M5 19 13 11"/></svg><img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Греческий" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Греческий</h3>
-              <p class="dish__desc">Томаты, огурец, сладкий перец, маслины и фета с орегано.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">250 г</span>
-                <data class="dish__price" value="420">420 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #9AA35A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8.3 5.2-14 14-14 0 8.8-5.7 14-14 14Z"/><path d="M5 19 13 11"/></svg><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Боул с киноа" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Боул с киноа</h3>
-              <p class="dish__desc">Киноа, нут, авокадо, печёные овощи и соус тахини.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">300 г</span>
-                <data class="dish__price" value="520">520 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #6F8F4A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8.3 5.2-14 14-14 0 8.8-5.7 14-14 14Z"/><path d="M5 19 13 11"/></svg><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Салат с авокадо" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Салат с авокадо</h3>
-              <p class="dish__desc">Микс салатов, авокадо, томаты черри, огурец, семена и лимонная заправка.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">260 г</span>
-                <data class="dish__price" value="460">460 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #B9A15E">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8.3 5.2-14 14-14 0 8.8-5.7 14-14 14Z"/><path d="M5 19 13 11"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Оливье с говяжьим языком</h3>
-              <p class="dish__desc">Язык, картофель, малосольные огурцы, горошек и перепелиное яйцо.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">220 г</span>
-                <data class="dish__price" value="390">390 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #8F4B3A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19c0-8.3 5.2-14 14-14 0 8.8-5.7 14-14 14Z"/><path d="M5 19 13 11"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Тёплый салат с ростбифом</h3>
-              <p class="dish__desc">Ростбиф, руккола, вяленые томаты, пармезан и бальзамик.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">240 г</span>
-                <data class="dish__price" value="590">590 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-      </ul>
-      </div>
-    </section>
-    <section class="section" id="desserts" aria-labelledby="desserts-title">
-      <div class="wrap">
-      <header class="section__head reveal">
-        <div class="section__title">
-          <span class="section__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16v-7.5H4Z"/><path d="M4 12.5 12 7l8 5.5"/><path d="M4 16.2c2.7 1 5.3-1 8 0s5.3 1 8 0"/><circle cx="12" cy="4.6" r="1.6"/></svg></span>
-          <h2 id="desserts-title">Десерты</h2>
-        </div>
-        <div class="section__aside">
-          <span class="section__count">6 позиций</span>
-          <p class="section__note">К любому десерту можно добавить шарик мороженого — 90 ₽.</p>
-        </div>
-      </header>
-      <ul class="dishes" role="list">
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #C9A26A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16v-7.5H4Z"/><path d="M4 12.5 12 7l8 5.5"/><path d="M4 16.2c2.7 1 5.3-1 8 0s5.3 1 8 0"/><circle cx="12" cy="4.6" r="1.6"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Чизкейк Нью-Йорк</h3>
-              <p class="dish__desc">Сливочный сыр, песочная основа и ягодный соус.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">150 г</span>
-                <data class="dish__price" value="380">380 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #8A6142">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16v-7.5H4Z"/><path d="M4 12.5 12 7l8 5.5"/><path d="M4 16.2c2.7 1 5.3-1 8 0s5.3 1 8 0"/><circle cx="12" cy="4.6" r="1.6"/></svg><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Тирамису" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Тирамису</h3>
-              <p class="dish__desc">Савоярди, маскарпоне, эспрессо и какао.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">160 г</span>
-                <data class="dish__price" value="420">420 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #D4A04F">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16v-7.5H4Z"/><path d="M4 12.5 12 7l8 5.5"/><path d="M4 16.2c2.7 1 5.3-1 8 0s5.3 1 8 0"/><circle cx="12" cy="4.6" r="1.6"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Блинчики со сметаной</h3>
-              <p class="dish__desc">Три тонких блина, сметана и малиновое варенье.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">220 г</span>
-                <data class="dish__price" value="290">290 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #B7703E">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16v-7.5H4Z"/><path d="M4 12.5 12 7l8 5.5"/><path d="M4 16.2c2.7 1 5.3-1 8 0s5.3 1 8 0"/><circle cx="12" cy="4.6" r="1.6"/></svg><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Панкейки с ягодами" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Панкейки с ягодами</h3>
-              <p class="dish__desc">Пышные панкейки, свежие ягоды и кленовый сироп.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">230 г</span>
-                <data class="dish__price" value="390">390 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media has-photo" style="--tone: #5C3A2A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16v-7.5H4Z"/><path d="M4 12.5 12 7l8 5.5"/><path d="M4 16.2c2.7 1 5.3-1 8 0s5.3 1 8 0"/><circle cx="12" cy="4.6" r="1.6"/></svg><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=600&amp;q=75" srcset="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w, https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=900&amp;q=75 900w" sizes="(max-width: 640px) 112px, (max-width: 1024px) 46vw, 380px" width="600" height="450" alt="Шоколадный торт" loading="lazy" decoding="async">
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Шоколадный торт</h3>
-              <p class="dish__desc">Тёмный шоколад 70%, шоколадный ганаш и хрустящая основа.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">140 г</span>
-                <data class="dish__price" value="410">410 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="dish reveal">
-          <article class="dish__card">
-            <div class="dish__media" style="--tone: #C68A47">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16v-7.5H4Z"/><path d="M4 12.5 12 7l8 5.5"/><path d="M4 16.2c2.7 1 5.3-1 8 0s5.3 1 8 0"/><circle cx="12" cy="4.6" r="1.6"/></svg>
-            </div>
-            <div class="dish__body">
-              <h3 class="dish__name">Медовик</h3>
-              <p class="dish__desc">Тонкие медовые коржи и нежный сметанный крем.</p>
-              <div class="dish__foot">
-                <span class="dish__weight">150 г</span>
-                <data class="dish__price" value="340">340 ₽</data>
-              </div>
-            </div>
-          </article>
-        </li>
-      </ul>
-      </div>
-    </section>
-    <section class="section section--drinks" id="drinks" aria-labelledby="drinks-title">
-      <div class="wrap">
-      <header class="section__head reveal">
-        <div class="section__title">
-          <span class="section__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5Z"/><path d="M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8.5 3c-.8 1.2.8 2 0 3.2M12.5 3c-.8 1.2.8 2 0 3.2"/></svg></span>
-          <h2 id="drinks-title">Напитки</h2>
-        </div>
-        <div class="section__aside">
-          <span class="section__count">20 позиций</span>
-          <p class="section__note">Растительное молоко к кофе — 60 ₽: овсяное, миндальное, кокосовое.</p>
-        </div>
-      </header>
-      <div class="drinks">
-        <article class="drink reveal">
-          <header class="drink__head">
-            <div class="drink__photo" style="--tone: #8A5A3A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5Z"/><path d="M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8.5 3c-.8 1.2.8 2 0 3.2M12.5 3c-.8 1.2.8 2 0 3.2"/></svg>
-              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;w=200&amp;q=75" srcset="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;w=200&amp;q=75 200w, https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w" sizes="96px" width="200" height="200" alt="Кофе" loading="lazy" decoding="async">
-            </div>
-            <h3 class="drink__title">Кофе</h3>
-          </header>
-          <ul class="drink__list" role="list">
-            <li class="row"><span class="row__name">Эспрессо</span><span class="row__vol">40 мл</span><data class="row__price" value="160">160 ₽</data></li>
-            <li class="row"><span class="row__name">Американо</span><span class="row__vol">250 мл</span><data class="row__price" value="190">190 ₽</data></li>
-            <li class="row"><span class="row__name">Капучино</span><span class="row__vol">300 мл</span><data class="row__price" value="240">240 ₽</data></li>
-            <li class="row"><span class="row__name">Латте</span><span class="row__vol">350 мл</span><data class="row__price" value="260">260 ₽</data></li>
-            <li class="row"><span class="row__name">Флэт уайт</span><span class="row__vol">200 мл</span><data class="row__price" value="260">260 ₽</data></li>
-            <li class="row"><span class="row__name">Раф ванильный</span><span class="row__vol">300 мл</span><data class="row__price" value="290">290 ₽</data></li>
-          </ul>
-        </article>
-        <article class="drink reveal">
-          <header class="drink__head">
-            <div class="drink__photo" style="--tone: #9A6B3A">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5Z"/><path d="M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8.5 3c-.8 1.2.8 2 0 3.2M12.5 3c-.8 1.2.8 2 0 3.2"/></svg>
-              <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&amp;fit=crop&amp;w=200&amp;q=75" srcset="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&amp;fit=crop&amp;w=200&amp;q=75 200w, https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w" sizes="96px" width="200" height="200" alt="Чай" loading="lazy" decoding="async">
-            </div>
-            <h3 class="drink__title">Чай</h3>
-          </header>
-          <ul class="drink__list" role="list">
-            <li class="row"><span class="row__name">Чёрный · Эрл Грей</span><span class="row__vol">600 мл</span><data class="row__price" value="290">290 ₽</data></li>
-            <li class="row"><span class="row__name">Зелёный · Сенча</span><span class="row__vol">600 мл</span><data class="row__price" value="290">290 ₽</data></li>
-            <li class="row"><span class="row__name">Облепиховый с мёдом</span><span class="row__vol">600 мл</span><data class="row__price" value="380">380 ₽</data></li>
-            <li class="row"><span class="row__name">Имбирный с лимоном</span><span class="row__vol">600 мл</span><data class="row__price" value="360">360 ₽</data></li>
-            <li class="row"><span class="row__name">Травяной сбор</span><span class="row__vol">600 мл</span><data class="row__price" value="320">320 ₽</data></li>
-          </ul>
-        </article>
-        <article class="drink reveal">
-          <header class="drink__head">
-            <div class="drink__photo" style="--tone: #C9A23B">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5Z"/><path d="M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8.5 3c-.8 1.2.8 2 0 3.2M12.5 3c-.8 1.2.8 2 0 3.2"/></svg>
-              <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&amp;fit=crop&amp;w=200&amp;q=75" srcset="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&amp;fit=crop&amp;w=200&amp;q=75 200w, https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w" sizes="96px" width="200" height="200" alt="Лимонады" loading="lazy" decoding="async">
-            </div>
-            <h3 class="drink__title">Лимонады</h3>
-          </header>
-          <ul class="drink__list" role="list">
-            <li class="row"><span class="row__name">Классический</span><span class="row__vol">400 мл</span><data class="row__price" value="290">290 ₽</data></li>
-            <li class="row"><span class="row__name">Клубника и базилик</span><span class="row__vol">400 мл</span><data class="row__price" value="320">320 ₽</data></li>
-            <li class="row"><span class="row__name">Манго и маракуйя</span><span class="row__vol">400 мл</span><data class="row__price" value="340">340 ₽</data></li>
-            <li class="row"><span class="row__name">Тархун</span><span class="row__vol">400 мл</span><data class="row__price" value="310">310 ₽</data></li>
-          </ul>
-        </article>
-        <article class="drink reveal">
-          <header class="drink__head">
-            <div class="drink__photo" style="--tone: #D9822B">
-              <svg class="dish__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5Z"/><path d="M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8.5 3c-.8 1.2.8 2 0 3.2M12.5 3c-.8 1.2.8 2 0 3.2"/></svg>
-              <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&amp;fit=crop&amp;w=200&amp;q=75" srcset="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&amp;fit=crop&amp;w=200&amp;q=75 200w, https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&amp;fit=crop&amp;w=400&amp;q=75 400w" sizes="96px" width="200" height="200" alt="Соки и морсы" loading="lazy" decoding="async">
-            </div>
-            <h3 class="drink__title">Соки и морсы</h3>
-          </header>
-          <ul class="drink__list" role="list">
-            <li class="row"><span class="row__name">Апельсиновый фреш</span><span class="row__vol">250 мл</span><data class="row__price" value="350">350 ₽</data></li>
-            <li class="row"><span class="row__name">Грейпфрутовый фреш</span><span class="row__vol">250 мл</span><data class="row__price" value="370">370 ₽</data></li>
-            <li class="row"><span class="row__name">Яблочный</span><span class="row__vol">250 мл</span><data class="row__price" value="190">190 ₽</data></li>
-            <li class="row"><span class="row__name">Томатный</span><span class="row__vol">250 мл</span><data class="row__price" value="190">190 ₽</data></li>
-            <li class="row"><span class="row__name">Клюквенный морс</span><span class="row__vol">400 мл</span><data class="row__price" value="220">220 ₽</data></li>
-          </ul>
-        </article>
-      </div>
-      </div>
-    </section>
     </div>
+  </section>
+
+  <main id="menu" itemscope itemtype="https://schema.org/Menu">
+    <meta itemprop="name" content="Меню кафе My family">
+    <section class="section" id="soups" aria-labelledby="soups-title"
+             itemprop="hasMenuSection" itemscope itemtype="https://schema.org/MenuSection">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">01</span>
+          <h2 class="section__title" id="soups-title" itemprop="name">Супы</h2>
+          <p class="section__note">К каждому супу — ломтик ржаного хлеба</p>
+        </header>
+        <div class="grid">
+        <article class="dish dish--feature reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1648726445011-9fbf3a5ddb90?auto=format&fit=crop&w=800&q=72" srcset="https://images.unsplash.com/photo-1648726445011-9fbf3a5ddb90?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1648726445011-9fbf3a5ddb90?auto=format&fit=crop&w=800&q=72 800w, https://images.unsplash.com/photo-1648726445011-9fbf3a5ddb90?auto=format&fit=crop&w=1200&q=72 1200w" sizes="(min-width: 1024px) 40vw, (min-width: 640px) 55vw, 100vw"
+                 width="800" height="600" alt="Борщ" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Борщ</h3>
+            <p class="dish__desc" itemprop="description">Томлёная говядина, свёкла, капуста, сметана и укроп.</p>
+            <p class="dish__meta"><span class="dish__size">350 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="390"><meta itemprop="priceCurrency" content="RUB">390&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1612966948332-81d747414a8f?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1612966948332-81d747414a8f?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1612966948332-81d747414a8f?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1612966948332-81d747414a8f?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Куриный суп с лапшой" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Куриный суп с лапшой</h3>
+            <p class="dish__desc" itemprop="description">Прозрачный бульон, курица, яичная лапша и морковь.</p>
+            <p class="dish__meta"><span class="dish__size">350 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="320"><meta itemprop="priceCurrency" content="RUB">320&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:2" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1624793806526-75822e021eac?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1624793806526-75822e021eac?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1624793806526-75822e021eac?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1624793806526-75822e021eac?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Солянка" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Солянка</h3>
+            <p class="dish__desc" itemprop="description">Копчёности, солёные огурцы, маслины и ломтик лимона.</p>
+            <p class="dish__meta"><span class="dish__size">350 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="430"><meta itemprop="priceCurrency" content="RUB">430&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1659603851579-17755833517e?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1659603851579-17755833517e?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1659603851579-17755833517e?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1659603851579-17755833517e?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Грибной крем-суп" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Грибной крем-суп</h3>
+            <p class="dish__desc" itemprop="description">Шампиньоны, белые грибы, сливки и тимьян.</p>
+            <p class="dish__meta"><span class="dish__size">300 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="370"><meta itemprop="priceCurrency" content="RUB">370&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Тыквенный крем-суп" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Тыквенный крем-суп</h3>
+            <p class="dish__desc" itemprop="description">Запечённая тыква, имбирь, кокосовые сливки и семечки.</p>
+            <p class="dish__meta"><span class="dish__size">300 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="340"><meta itemprop="priceCurrency" content="RUB">340&nbsp;₽</span></p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="mains" aria-labelledby="mains-title"
+             itemprop="hasMenuSection" itemscope itemtype="https://schema.org/MenuSection">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">02</span>
+          <h2 class="section__title" id="mains-title" itemprop="name">Основные блюда</h2>
+          <p class="section__note">Мясо, птица и паста</p>
+        </header>
+        <div class="grid">
+        <article class="dish dish--feature reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1678684274579-01bb82b92367?auto=format&fit=crop&w=800&q=72" srcset="https://images.unsplash.com/photo-1678684274579-01bb82b92367?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1678684274579-01bb82b92367?auto=format&fit=crop&w=800&q=72 800w, https://images.unsplash.com/photo-1678684274579-01bb82b92367?auto=format&fit=crop&w=1200&q=72 1200w" sizes="(min-width: 1024px) 40vw, (min-width: 640px) 55vw, 100vw"
+                 width="800" height="600" alt="Котлеты с картофельным пюре" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Котлеты с картофельным пюре</h3>
+            <p class="dish__desc" itemprop="description">Две котлеты из говядины и свинины, сливочное пюре и пряный соус.</p>
+            <p class="dish__meta"><span class="dish__size">320 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="520"><meta itemprop="priceCurrency" content="RUB">520&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1588013273468-315fd88ea34c?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1588013273468-315fd88ea34c?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1588013273468-315fd88ea34c?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1588013273468-315fd88ea34c?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Спагетти карбонара" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Спагетти карбонара</h3>
+            <p class="dish__desc" itemprop="description">Гуанчиале, яичный желток, пекорино и чёрный перец.</p>
+            <p class="dish__meta"><span class="dish__size">280 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="560"><meta itemprop="priceCurrency" content="RUB">560&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:2" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Пенне болоньезе" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Пенне болоньезе</h3>
+            <p class="dish__desc" itemprop="description">Мясной соус, томлённый три часа, и пармезан.</p>
+            <p class="dish__meta"><span class="dish__size">300 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="540"><meta itemprop="priceCurrency" content="RUB">540&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Паста с морепродуктами" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Паста с морепродуктами</h3>
+            <p class="dish__desc" itemprop="description">Лингвини, креветки, мидии, томаты и немного чили.</p>
+            <p class="dish__meta"><span class="dish__size">320 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="690"><meta itemprop="priceCurrency" content="RUB">690&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1546964124-0cce460f38ef?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1546964124-0cce460f38ef?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1546964124-0cce460f38ef?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1546964124-0cce460f38ef?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Стейк рибай" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Стейк рибай</h3>
+            <p class="dish__desc" itemprop="description">Мраморная говядина на гриле, спаржа и перечный соус.</p>
+            <p class="dish__meta"><span class="dish__size">300 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="1490"><meta itemprop="priceCurrency" content="RUB">1&nbsp;490&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:2" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Свиные рёбра" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Свиные рёбра</h3>
+            <p class="dish__desc" itemprop="description">Томлёные рёбра в глазури барбекю со свежими томатами.</p>
+            <p class="dish__meta"><span class="dish__size">450 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="890"><meta itemprop="priceCurrency" content="RUB">890&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Тефтели в томатном соусе" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Тефтели в томатном соусе</h3>
+            <p class="dish__desc" itemprop="description">Говядина, томаты, базилик и тёртый пармезан.</p>
+            <p class="dish__meta"><span class="dish__size">300 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="490"><meta itemprop="priceCurrency" content="RUB">490&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Запечённый цыплёнок" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Запечённый цыплёнок</h3>
+            <p class="dish__desc" itemprop="description">Половина цыплёнка с чесноком, тимьяном и лимоном.</p>
+            <p class="dish__meta"><span class="dish__size">400 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="720"><meta itemprop="priceCurrency" content="RUB">720&nbsp;₽</span></p>
+          </div>
+        </article>
+        </div>
+      <div class="sides reveal" itemprop="hasMenuSection" itemscope itemtype="https://schema.org/MenuSection">
+        <div class="sides__photo">
+          <img src="https://images.unsplash.com/photo-1625944227313-4f7f68e6b3fa?auto=format&fit=crop&w=800&q=72" srcset="https://images.unsplash.com/photo-1625944227313-4f7f68e6b3fa?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1625944227313-4f7f68e6b3fa?auto=format&fit=crop&w=800&q=72 800w"
+               sizes="(min-width: 900px) 38vw, 100vw" width="800" height="600"
+               alt="Овощи на гриле" loading="lazy" decoding="async">
+        </div>
+        <div class="sides__body">
+          <h3 class="sides__title" itemprop="name">Гарниры</h3>
+          <ul class="sides__list">
+            <li class="side" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+              <div>
+                <h4 class="side__name" itemprop="name">Картофельное пюре</h4>
+                <p class="side__desc" itemprop="description">На сливках и сливочном масле</p>
+              </div>
+              <div class="side__price">
+                <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="160"><meta itemprop="priceCurrency" content="RUB">160&nbsp;₽</span>
+                <span class="dish__size">150 г</span>
+              </div>
+            </li>
+            <li class="side" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+              <div>
+                <h4 class="side__name" itemprop="name">Овощи гриль</h4>
+                <p class="side__desc" itemprop="description">Кабачок, баклажан, перец и томаты</p>
+              </div>
+              <div class="side__price">
+                <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="260"><meta itemprop="priceCurrency" content="RUB">260&nbsp;₽</span>
+                <span class="dish__size">180 г</span>
+              </div>
+            </li>
+            <li class="side" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+              <div>
+                <h4 class="side__name" itemprop="name">Рис с зеленью</h4>
+                <p class="side__desc" itemprop="description">Длиннозёрный рис, укроп и петрушка</p>
+              </div>
+              <div class="side__price">
+                <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="140"><meta itemprop="priceCurrency" content="RUB">140&nbsp;₽</span>
+                <span class="dish__size">150 г</span>
+              </div>
+            </li>
+            <li class="side" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+              <div>
+                <h4 class="side__name" itemprop="name">Гречка</h4>
+                <p class="side__desc" itemprop="description">Рассыпчатая, со сливочным маслом</p>
+              </div>
+              <div class="side__price">
+                <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="130"><meta itemprop="priceCurrency" content="RUB">130&nbsp;₽</span>
+                <span class="dish__size">150 г</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="section section--dark" id="fastfood" aria-labelledby="fastfood-title"
+             itemprop="hasMenuSection" itemscope itemtype="https://schema.org/MenuSection">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">03</span>
+          <h2 class="section__title" id="fastfood-title" itemprop="name">Фастфуд</h2>
+          <p class="section__note">Соус на выбор: кетчуп, ранч, сырный или барбекю</p>
+        </header>
+        <div class="grid">
+        <article class="dish dish--feature reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=72" srcset="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=72 800w, https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=72 1200w" sizes="(min-width: 1024px) 40vw, (min-width: 640px) 55vw, 100vw"
+                 width="800" height="600" alt="Классический бургер" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Классический бургер</h3>
+            <p class="dish__desc" itemprop="description">Котлета из говядины, чеддер, маринованный огурец и горчичный соус.</p>
+            <p class="dish__meta"><span class="dish__size">310 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="490"><meta itemprop="priceCurrency" content="RUB">490&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Бургер с беконом" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Бургер с беконом</h3>
+            <p class="dish__desc" itemprop="description">Говядина, хрустящий бекон, томат, салат и копчёный соус.</p>
+            <p class="dish__meta"><span class="dish__size">340 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="560"><meta itemprop="priceCurrency" content="RUB">560&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:2" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1633321702518-7feccafb94d5?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1633321702518-7feccafb94d5?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1633321702518-7feccafb94d5?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1633321702518-7feccafb94d5?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Шаурма с курицей" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Шаурма с курицей</h3>
+            <p class="dish__desc" itemprop="description">Курица на гриле, свежие овощи, чесночный соус и тонкий лаваш.</p>
+            <p class="dish__meta"><span class="dish__size">350 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="360"><meta itemprop="priceCurrency" content="RUB">360&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1599599810694-b5b37304c041?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1599599810694-b5b37304c041?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1599599810694-b5b37304c041?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1599599810694-b5b37304c041?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Хот-дог" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Хот-дог</h3>
+            <p class="dish__desc" itemprop="description">Говяжья сосиска, мягкая булка, кетчуп и горчица.</p>
+            <p class="dish__meta"><span class="dish__size">180 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="270"><meta itemprop="priceCurrency" content="RUB">270&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1638368593249-7cadb261e8b3?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1638368593249-7cadb261e8b3?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1638368593249-7cadb261e8b3?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1638368593249-7cadb261e8b3?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Хот-дог острый" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Хот-дог острый</h3>
+            <p class="dish__desc" itemprop="description">Копчёная сосиска, маринованный лук, халапеньо и сырный соус.</p>
+            <p class="dish__meta"><span class="dish__size">220 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="340"><meta itemprop="priceCurrency" content="RUB">340&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:2" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Картофель фри" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Картофель фри</h3>
+            <p class="dish__desc" itemprop="description">Тонкая нарезка, морская соль и соус на выбор.</p>
+            <p class="dish__meta"><span class="dish__size">150 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="210"><meta itemprop="priceCurrency" content="RUB">210&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1627662055487-551888db3aa8?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1627662055487-551888db3aa8?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1627662055487-551888db3aa8?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1627662055487-551888db3aa8?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Наггетсы" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Наггетсы</h3>
+            <p class="dish__desc" itemprop="description">Девять штук в хрустящей панировке и соус на выбор.</p>
+            <p class="dish__meta"><span class="dish__size">180 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="310"><meta itemprop="priceCurrency" content="RUB">310&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1768204039907-77a974159ef0?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1768204039907-77a974159ef0?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1768204039907-77a974159ef0?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1768204039907-77a974159ef0?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Куриные стрипсы" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Куриные стрипсы</h3>
+            <p class="dish__desc" itemprop="description">Филе в панировке, картофель фри и соус ранч.</p>
+            <p class="dish__meta"><span class="dish__size">320 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="450"><meta itemprop="priceCurrency" content="RUB">450&nbsp;₽</span></p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="salads" aria-labelledby="salads-title"
+             itemprop="hasMenuSection" itemscope itemtype="https://schema.org/MenuSection">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">04</span>
+          <h2 class="section__title" id="salads-title" itemprop="name">Салаты</h2>
+          <p class="section__note">Заправляем перед подачей</p>
+        </header>
+        <div class="grid">
+        <article class="dish dish--feature reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1746211108786-ca20c8f80ecd?auto=format&fit=crop&w=800&q=72" srcset="https://images.unsplash.com/photo-1746211108786-ca20c8f80ecd?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1746211108786-ca20c8f80ecd?auto=format&fit=crop&w=800&q=72 800w, https://images.unsplash.com/photo-1746211108786-ca20c8f80ecd?auto=format&fit=crop&w=1200&q=72 1200w" sizes="(min-width: 1024px) 40vw, (min-width: 640px) 55vw, 100vw"
+                 width="800" height="600" alt="Цезарь с курицей" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Цезарь с курицей</h3>
+            <p class="dish__desc" itemprop="description">Романо, курица гриль, пармезан, гренки и анчоусная заправка.</p>
+            <p class="dish__meta"><span class="dish__size">240 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="470"><meta itemprop="priceCurrency" content="RUB">470&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1778449532114-430396ada55b?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1778449532114-430396ada55b?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1778449532114-430396ada55b?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1778449532114-430396ada55b?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Греческий" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Греческий</h3>
+            <p class="dish__desc" itemprop="description">Томаты, огурцы, фета, маслины, красный лук и орегано.</p>
+            <p class="dish__meta"><span class="dish__size">260 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="420"><meta itemprop="priceCurrency" content="RUB">420&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:2" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1551248429-40975aa4de74?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1551248429-40975aa4de74?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1551248429-40975aa4de74?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Салат с креветками" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Салат с креветками</h3>
+            <p class="dish__desc" itemprop="description">Креветки, рис, авокадо, огурец и цитрусовая заправка.</p>
+            <p class="dish__meta"><span class="dish__size">250 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="590"><meta itemprop="priceCurrency" content="RUB">590&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Боул с киноа" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Боул с киноа</h3>
+            <p class="dish__desc" itemprop="description">Киноа, нут, авокадо, краснокочанная капуста и тахини.</p>
+            <p class="dish__meta"><span class="dish__size">280 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="450"><meta itemprop="priceCurrency" content="RUB">450&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Томаты с моцареллой" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Томаты с моцареллой</h3>
+            <p class="dish__desc" itemprop="description">Спелые томаты, моцарелла, базилик и оливковое масло.</p>
+            <p class="dish__meta"><span class="dish__size">220 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="430"><meta itemprop="priceCurrency" content="RUB">430&nbsp;₽</span></p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section--tint" id="desserts" aria-labelledby="desserts-title"
+             itemprop="hasMenuSection" itemscope itemtype="https://schema.org/MenuSection">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">05</span>
+          <h2 class="section__title" id="desserts-title" itemprop="name">Десерты</h2>
+          <p class="section__note">Блинчики и фондан готовим после заказа — около 10 минут</p>
+        </header>
+        <div class="grid">
+        <article class="dish dish--feature reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=800&q=72" srcset="https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=800&q=72 800w, https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=1200&q=72 1200w" sizes="(min-width: 1024px) 40vw, (min-width: 640px) 55vw, 100vw"
+                 width="800" height="600" alt="Чизкейк" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Чизкейк</h3>
+            <p class="dish__desc" itemprop="description">Сливочный сыр, песочная основа и ягодный соус.</p>
+            <p class="dish__meta"><span class="dish__size">150 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="340"><meta itemprop="priceCurrency" content="RUB">340&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Тирамису" loading="lazy" decoding="async" itemprop="image" style="object-position:50% 90%">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Тирамису</h3>
+            <p class="dish__desc" itemprop="description">Маскарпоне, савоярди, эспрессо и какао.</p>
+            <p class="dish__meta"><span class="dish__size">150 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="360"><meta itemprop="priceCurrency" content="RUB">360&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:2" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Блинчики" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Блинчики</h3>
+            <p class="dish__desc" itemprop="description">Тонкие блинчики со сливочным соусом и свежими ягодами.</p>
+            <p class="dish__meta"><span class="dish__size">180 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="290"><meta itemprop="priceCurrency" content="RUB">290&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Панкейки" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Панкейки</h3>
+            <p class="dish__desc" itemprop="description">Три панкейка, кленовый сироп и сливочное масло.</p>
+            <p class="dish__meta"><span class="dish__size">200 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="320"><meta itemprop="priceCurrency" content="RUB">320&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 40vw"
+                 width="800" height="600" alt="Шоколадный фондан" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Шоколадный фондан</h3>
+            <p class="dish__desc" itemprop="description">Тёплый кекс с жидкой серединой и ванильное мороженое.</p>
+            <p class="dish__meta"><span class="dish__size">160 г</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="380"><meta itemprop="priceCurrency" content="RUB">380&nbsp;₽</span></p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="drinks" aria-labelledby="drinks-title"
+             itemprop="hasMenuSection" itemscope itemtype="https://schema.org/MenuSection">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <span class="section__num" aria-hidden="true">06</span>
+          <h2 class="section__title" id="drinks-title" itemprop="name">Напитки</h2>
+          <p class="section__note">Чай, кофе, лимонады и соки</p>
+        </header>
+        <div class="grid grid--compact">
+        <article class="dish reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                 width="800" height="600" alt="Чёрный чай" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Чёрный чай</h3>
+            <p class="dish__desc" itemprop="description">Ассам, по желанию с лимоном.</p>
+            <p class="dish__meta"><span class="dish__size">400 мл</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="190"><meta itemprop="priceCurrency" content="RUB">190&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                 width="800" height="600" alt="Травяной чай" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Травяной чай</h3>
+            <p class="dish__desc" itemprop="description">Мята, чабрец и ромашка.</p>
+            <p class="dish__meta"><span class="dish__size">400 мл</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="220"><meta itemprop="priceCurrency" content="RUB">220&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:2" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                 width="800" height="600" alt="Холодный чай" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Холодный чай</h3>
+            <p class="dish__desc" itemprop="description">Чёрный чай, персик и лимон.</p>
+            <p class="dish__meta"><span class="dish__size">400 мл</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="260"><meta itemprop="priceCurrency" content="RUB">260&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                 width="800" height="600" alt="Американо" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Американо</h3>
+            <p class="dish__desc" itemprop="description">Двойной эспрессо и горячая вода.</p>
+            <p class="dish__meta"><span class="dish__size">200 мл</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="170"><meta itemprop="priceCurrency" content="RUB">170&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                 width="800" height="600" alt="Капучино" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Капучино</h3>
+            <p class="dish__desc" itemprop="description">Эспрессо, молоко и плотная пена.</p>
+            <p class="dish__meta"><span class="dish__size">300 мл</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="220"><meta itemprop="priceCurrency" content="RUB">220&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:2" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                 width="800" height="600" alt="Флэт уайт" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Флэт уайт</h3>
+            <p class="dish__desc" itemprop="description">Двойной эспрессо и бархатистое молоко.</p>
+            <p class="dish__meta"><span class="dish__size">200 мл</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="240"><meta itemprop="priceCurrency" content="RUB">240&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                 width="800" height="600" alt="Айс-латте" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Айс-латте</h3>
+            <p class="dish__desc" itemprop="description">Эспрессо, холодное молоко и лёд.</p>
+            <p class="dish__meta"><span class="dish__size">350 мл</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="270"><meta itemprop="priceCurrency" content="RUB">270&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1621263764928-df1444c5e859?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                 width="800" height="600" alt="Лимонад с мятой" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Лимонад с мятой</h3>
+            <p class="dish__desc" itemprop="description">Лимон, свежая мята и содовая.</p>
+            <p class="dish__meta"><span class="dish__size">400 мл</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="280"><meta itemprop="priceCurrency" content="RUB">280&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:2" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                 width="800" height="600" alt="Лайм и огурец" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Лайм и огурец</h3>
+            <p class="dish__desc" itemprop="description">Лайм, огурец, мята и содовая.</p>
+            <p class="dish__meta"><span class="dish__size">400 мл</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="280"><meta itemprop="priceCurrency" content="RUB">280&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:0" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1523677011781-c91d1bbe2f9e?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                 width="800" height="600" alt="Цитрусовый лимонад" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Цитрусовый лимонад</h3>
+            <p class="dish__desc" itemprop="description">Апельсин, грейпфрут и лимон.</p>
+            <p class="dish__meta"><span class="dish__size">400 мл</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="290"><meta itemprop="priceCurrency" content="RUB">290&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:1" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                 width="800" height="600" alt="Апельсиновый сок" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Апельсиновый сок</h3>
+            <p class="dish__desc" itemprop="description">Свежевыжатый.</p>
+            <p class="dish__meta"><span class="dish__size">300 мл</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="320"><meta itemprop="priceCurrency" content="RUB">320&nbsp;₽</span></p>
+          </div>
+        </article>
+        <article class="dish reveal" style="--i:2" itemprop="hasMenuItem" itemscope itemtype="https://schema.org/MenuItem">
+          <div class="dish__photo">
+            <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=480&q=72" srcset="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=320&q=72 320w, https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=480&q=72 480w, https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=720&q=72 720w" sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                 width="800" height="600" alt="Сок манго" loading="lazy" decoding="async" itemprop="image">
+          </div>
+          <div class="dish__body">
+            <h3 class="dish__name" itemprop="name">Сок манго</h3>
+            <p class="dish__desc" itemprop="description">Манго и немного лайма.</p>
+            <p class="dish__meta"><span class="dish__size">300 мл</span><span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="price" content="290"><meta itemprop="priceCurrency" content="RUB">290&nbsp;₽</span></p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <div class="footer__brand">
-        <span class="logo__word">My <em>family</em></span>
-        <p>Кафе. Завтраки, обеды и ужины.</p>
+  <footer class="site-footer">
+    <div class="wrap site-footer__grid">
+      <p class="site-footer__logo">My family</p>
+      <nav aria-label="Разделы меню в подвале">
+        <ul class="site-footer__nav">
+          <li><a href="#soups">Супы</a></li>
+          <li><a href="#mains">Основные блюда</a></li>
+          <li><a href="#fastfood">Фастфуд</a></li>
+          <li><a href="#salads">Салаты</a></li>
+          <li><a href="#desserts">Десерты</a></li>
+          <li><a href="#drinks">Напитки</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__notes">
+        <p>Цены указаны в рублях. Вес порции — в готовом виде.</p>
+        <p>Об аллергенах и составе блюд можно спросить у официанта.</p>
+        <p>Подача может отличаться от фотографий. Фото: Unsplash.</p>
       </div>
-      <dl class="footer__info">
-        <div><dt>Адрес</dt><dd>Москва, ул. Садовая, 12</dd></div>
-        <div><dt>Часы работы</dt><dd>Ежедневно, 9:00–23:00</dd></div>
-        <div><dt>Телефон</dt><dd>+7 (495) 123-45-67</dd></div>
-      </dl>
-      <p class="footer__note">Вес указан для готового блюда. Если у&nbsp;вас аллергия или особые пожелания, скажите официанту.<br>© 2026 My family</p>
     </div>
   </footer>
-
-  <a class="to-top" href="#top" aria-label="Наверх">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
-  </a>
 </body>
 </html>

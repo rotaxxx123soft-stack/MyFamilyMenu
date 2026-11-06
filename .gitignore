@@ -1,0 +1,8 @@
+# Локальные настройки Claude Code
+.claude/
+
+# Служебные файлы Python и ОС
+__pycache__/
+*.pyc
+Thumbs.db
+.DS_Store
